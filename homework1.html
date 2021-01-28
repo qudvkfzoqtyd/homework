@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <title>스파르타코딩클럽 | 숙제 유병현</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+
+        *{
+            font-family: 'Nanum Myeongjo', serif;
+        }
+
+        .myitem{
+            width: 500px;
+            height: 300px;
+
+            background-image: url("data:image/jpeg;base64,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");
+            background-size: cover;
+            background-position:center;
+
+
+        }
+
+        .price{
+            font-size: 16px;
+        }
+
+        .google{
+            width: 500px;
+            margin-top:20px;
+            margin-bottom: 20px;
+        }
+
+        .order-box{
+            width: 500px;
+        }
+
+        .mybtn{
+            width: 100px;
+            margin: auto;
+            display: block;
+        }
+
+        .wrap{
+            margin: auto;
+            width: 500px;
+        }
+
+        .rate{
+            color: blue;
+        }
+    </style>
+
+    <script>
+
+                    $.ajax({
+              type: "GET",
+              url: "https://api.manana.kr/exchange/rate.json",
+              data: {},
+              success: function(response){
+                let nowRate = response[1]['rate'];
+                $('#rate-box').text(nowRate)
+
+              }
+            })
+
+        function order(){
+            let name = $('#order-name').val();
+            let count = $('#order-count').val();
+            let address = $('#order-address').val();
+            let phone = $('#order-phone').val();
+
+            if (name == '') {
+                alert('이름을 입력하세요');
+
+
+            }else if (address == ''){
+                alert('주소를 입력하세요');
+
+
+            } else if (phone == ''){
+                alert('전화번호를 입력하세요');
+            }
+
+            else if (count == '--수량을 선택하세요--'){
+                alert('수량을 입력하세요');
+
+
+            }
+                else{
+                alert('주문이 완료되었습니다!')
+            }
+
+
+        }
+    </script>
+
+
+</head>
+
+<body>
+
+    <div class="wrap">
+
+
+
+    <div class="myitem"></div>
+
+    <div class="google">
+
+        <h1>구글을 팝니다
+            <span class="price">가격:100,000,000,000원/개</span>
+        </h1>
+        <p>이 구글은 뭐 팔까 고민하다가 그냥 뇌절하다가 아 숙제 너무 재밌다,, 구글 사고싶군요,, 너무 졸리네요 얼른 이걸 하고 잠에 들어야겠습니다</p>
+
+        <p  class="rate"> 달러-원 환율 : <span id="rate-box"> 1,000 </span> </p>
+   </div>
+
+
+
+
+    <div class="order-box">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">주문자 이름</span>
+        </div>
+        <input id="order-name" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">주소</span>
+        </div>
+        <input id="order-address" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">전화번호</span>
+        </div>
+        <input id="order-phone" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">수량</label>
+        </div>
+        <select id="order-count" class="custom-select" ">
+            <option selected>--수량을 선택하세요--</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+    </div>
+
+    <button onclick="order()" type="button" class="btn btn-primary mybtn">주문하기</button>
+
+
+
+    </div>
+
+
+     </div>
+</body>
+
+</html>
